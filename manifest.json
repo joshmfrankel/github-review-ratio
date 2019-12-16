@@ -1,0 +1,15 @@
+{
+  "name": "Github Review Ratio",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Display your current authored to reviewed ratio from Github",
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "browser_action": {},
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "html/options.html"
+}

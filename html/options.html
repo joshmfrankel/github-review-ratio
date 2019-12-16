@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        display: block;
+        width: 80%;
+        height: 100%;
+        margin: 50px auto;
+      }
+
+      .List {
+        border: 5px solid #dedede;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+      }
+
+      .List:hover {
+        box-shadow: 0px 0px 5px 0px #aaa;
+      }
+
+      .List-item {
+        display: block;
+        margin: 15px 0;
+      }
+
+      .List-item input {
+        display: block;
+      }
+
+      .List-header {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Options & Settings</h1>
+
+    <div class="List">
+      <h2 class="List-header">Standard Settings</h2>
+      <label class="List-item">
+        <input type="checkbox" id="debugMode">
+        Debug mode
+      </label>
+
+      <label class="List-item">
+        <p>How many days in the past to check for pull requests? (min: 7, max: 60)</p>
+        <input type="number" id="daysInPast" min="7" max="60">
+      </label>
+    </div>
+
+    <div class="List">
+      <h2 class="List-header">Github Integration</h2>
+      <label class="List-item">
+        Username: <input type="text" id="githubUsername">
+      </label>
+      <label class="List-item">
+        Password: <input type="password" id="githubPassword">
+      </label>
+      <label class="List-item">
+        Two-factor Authentication (optional) <input type="text" id="githubTwoFactor">
+        <p>Note: This is only required if enabled</p>
+      </label>
+
+      <button id="authorizeGithub">Integrate with Github</button>
+      <p id="integrationMessage"></p>
+    </div>
+
+    <!-- This must be placed into the body or else document is null -->
+    <script src="../js/options.js"></script>
+  </body>
+</html>
